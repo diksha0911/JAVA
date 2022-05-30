@@ -1,4 +1,4 @@
-package keshav1;
+package first;
 import java.io.*;
 public class copy2file {
 
