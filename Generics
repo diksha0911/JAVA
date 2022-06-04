@@ -1,0 +1,23 @@
+class Generic1<T>
+{
+    T n;
+    void set(T n)
+    {
+        this.n=n;
+    }
+    T get()
+    {
+        return n;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Generic1<Integer>obj=new Generic1<Integer>();
+	    obj.set(10);
+	    System.out.println(obj.get());
+	    Generic1<String>obj2=new Generic1<String>();
+	    obj2.set("Hello Daksh");
+	    System.out.println(obj2.get());
+	}
+}
