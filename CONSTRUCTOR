@@ -13,8 +13,8 @@ public class Student
     }
     public static void main(String args[])
     {
-        Student s1=new Student(12,"xxx");
-        Student s2=new Student(18,"yyy");
+        Student s1=new Student(20,"XXX");
+        Student s2=new Student(18,"YYY");
         s1.display();
         s2.display();
     }
