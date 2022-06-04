@@ -1,0 +1,8 @@
+public class conditional
+{
+public static void main(String arg[])
+{
+int a=20,b=24,c;
+c=(a>b)?a:b;
+System.out.println("Greatest no. is  "+c);
+}}
