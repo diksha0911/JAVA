@@ -1,0 +1,47 @@
+class FinallyDemo
+{
+static void procA()
+{
+try
+{
+System.out.println("Inside proc A....");
+throw new RuntimeException("Demo");
+}
+finally
+{
+System.out.println("Proc A's finally");
+}}
+static void procB()
+{
+try
+{
+System.out.println("Inside Proc B");
+return;
+}
+finally
+{
+System.out.println("Proc B's finally");
+}}
+static void procC()
+{
+try
+{
+System.out.println("Inside Proc C");
+}
+finally
+{
+System.out.println("Proc c's finally");
+}}
+public static void main(String arg[])
+{
+try
+{
+procA();
+}
+catch(Exception e)
+{
+System.out.println("Exception Caught");
+}
+procB();
+procC();
+}}
