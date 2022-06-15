@@ -1,0 +1,59 @@
+/*<applet code="MouseEvents" width=400 height=400>
+</applet>*/
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+class AutoDemo extends Frame implements MouseListener
+{
+String msg=" ";
+int mx=0,my=0;
+public AwtDemo()
+{
+addMouseListener(this);
+addWindowListener(new WindowAdapter()
+{
+public void WindowClosing (WindowEvent e)
+{
+System.exit(0);
+}});
+}
+public void mousePressed(MouseEvent e)
+{
+msg=msg+"Pressed ";
+mx=my=100;
+repaint();
+}
+public void mouseClicked(MouseEvent e)
+{
+msg=msg+" Clicked";
+mx=my=100;
+repaint();
+}
+public void mouseEntered(MouseEvent e)
+{
+msg=msg+"Entered ";
+mx=my=100;
+repaint();
+}
+public void mouseExited(MouseEvent e)
+{
+msg=msg+"Exited ";
+mx=my=100;
+repaint();
+}
+public void mouseReleased(MouseEvent e)
+{
+msg=msg+"Released ";
+mx=my=100;
+repaint();
+}
+public static void main(String args[])
+{
+AwtDemo ob=new AutoDemo();
+ob.setTitle("AWT DEMO");
+ob.setVisible(true);
+}
+public void paint(Graphics g)
+{
+g.draw String(msg,mx,my);
+}
