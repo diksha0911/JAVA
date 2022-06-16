@@ -1,0 +1,22 @@
+import javax.swing.*;
+import java.awt.*;
+class SwingDemo
+{
+SwingDemo()
+{
+JFrame jf=new JFrame("First swing Program");
+jf.setSize(275,100);
+jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+jf.setLayout(new FlowLayout());
+JLabel j1=new JLabel("First label");
+JLabel j2=new JLabel("Second Label");
+JLabel j3=new JLabel("Third label");
+jf.add(j1);
+jf.add(j2);
+jf.add(j3);
+jf.setVisible(true);
+}
+public static void main(String args[])
+{
+SwingDemo sw=new SwingDemo();
+}}
