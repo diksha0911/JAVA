@@ -1,0 +1,17 @@
+/*<applet code="DisplayFontNames" width=500 height=500>
+</applet>*/
+import java.awt.*;
+import java.applet.*;
+public class DisplayFontNames extends Applet
+{
+public void paint(Graphics g)
+{
+String msg=" ";
+String FontList[];
+GraphicsEnvironment ge=GraphicsEnvironment.getLocalGraphicsEnvironment();
+FontList=ge.getAvailableFontFamilyNames();
+for(int count=0;count<FontList.length;count++)
+{
+msg=FontList[count];
+g.drawString(msg,10,count*15);
+}}}
