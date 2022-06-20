@@ -1,0 +1,28 @@
+--Arraylist
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> c = new ArrayList<String>();
+    c.add("Red");
+    c.add("Pink");
+    c.add("Black");
+    c.add("Blue");
+    System.out.println(c);
+  }
+}
+
+--Arraylist with looping
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> colorcode = new ArrayList<String>();
+    colorcode.add("101");
+    colorcode.add("102");
+    colorcode.add("103");
+    colorcode.add("104");
+    for (int i = 0; i < colorcode.size(); i++) {
+      System.out.println(colorcode.get(i));
+    }
+  }
+}
+
