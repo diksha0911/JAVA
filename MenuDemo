@@ -1,0 +1,80 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class MenuDemo extends JFrame implements ActionListener
+{
+	
+	JMenu menu, colormenu, fontmenu, fontf, sizef,typef ;
+	JMenuItem i1,i2,i3,i4,i5,i6,i7,i8,i9,i10;
+	JMenuBar mb;
+	JLabel l1;
+	MenuDemo()
+	{
+	l1=new JLabel("My First Menu Application");
+	l1.setBounds(50,100,100,50);
+	add(l1);
+	mb=new JMenuBar();
+	menu=new JMenu("File");
+	colormenu=new JMenu("Color");
+	fontmenu=new JMenu("Font");
+	i1=new JMenuItem("Exit");
+	i2=new JMenuItem("Red");
+	i3=new JMenuItem("Green");
+	i4=new JMenuItem("Blue");
+	fontf=new JMenu("Font");	
+	sizef=new JMenu("Size");
+	typef=new JMenu("Type");
+	i5=new JMenuItem("12");
+	i6=new JMenuItem("14");
+	i7=new JMenuItem("16");
+	i8=new JMenuItem("Bold");
+	i9=new JMenuItem("Italics");
+	i10=new JMenuItem("Plain");
+	i1.addActionListener(this);
+	i2.addActionListener(this);
+	i3.addActionListener(this);
+	i4.addActionListener(this);
+	i5.addActionListener(this);
+	i6.addActionListener(this);
+	i7.addActionListener(this);
+	i8.addActionListener(this);
+	i9.addActionListener(this);
+	i10.addActionListener(this);
+	menu.add(i1);	
+	colormenu.add(i2);
+	colormenu.add(i3);
+	colormenu.add(i4);
+	sizef.add(i5);
+	sizef.add(i6);
+	sizef.add(i7);
+	typef.add(i8);
+	typef.add(i9);
+	typef.add(i10);
+	
+	fontmenu.add(colormenu);
+	//fontmenu.add(fontf);
+	fontmenu.add(sizef);
+	mb.add(menu);
+	mb.add(fontmenu);
+	setSize(300,400);
+	setJMenuBar(mb);
+	setVisible(true);
+}
+public void actionPerformed(ActionEvent e)
+{
+	if(e.getSource()==i1)
+	{	System.exit(0);
+	}
+	if(e.getSource()==i2)
+		l1.setForeground(Color.RED);
+	else if(e.getSource()==i3)
+		l1.setForeground(Color.GREEN);
+	else if(e.getSource()==i4)
+		l1.setForeground(Color.BLUE);
+}
+public static void main(String[] arg)
+{
+	new MenuDemo();
+}
+}
