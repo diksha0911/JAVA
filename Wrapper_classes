@@ -1,0 +1,24 @@
+//Example of autoboxing.............
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int a=10;
+	    Integer ob=Integer.valueOf(a);
+	    Integer ob1=a;
+	    System.out.println(a+" "+ob+" "+ob1);
+	}
+}
+
+//Example of unboxing.............
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Integer i=new Integer(10);
+	    int a=i.intValue();
+	    int b=i;
+		System.out.println(i+" "+a+" "+b);
+	}
+}
+
